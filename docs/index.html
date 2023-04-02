@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | NukoDash!</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+  <head prefix="og: https://ogp.me/ns#">
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>ぬこダッシュ！ | Unity WebGL Player</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico"/>
     <link rel="stylesheet" href="TemplateData/style.css">
+
+    <!--OGP設定-->
+    <meta name="keywords" content="ぬこダッシュ！、ぬこダッシュ、NukoDash!、NukoDash、ぬこ、ばとるぬこ、BattleNuko、Unity"/>
+    <meta property="og:url" content="https://battlenuko.github.io/NukoDashPlay/"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="ぬこダッシュ！ | Unity WebGL Player"/>
+    <meta property="og:description" content="猫耳少女の横スクロールランゲーム！"/>
+    <meta property="og:image" content="https://battlenuko.github.io/NukoDashPlay/TemplateData/OgpImage.png"/>
+
+    <!--Twitterカード設定-->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:description" content="猫耳少女の横スクロールランゲーム！"/>
+    <mata name="twitter:site" content="https://battlenuko.github.io/NukoDashPlay/"/>
+    <meta name="twitter:image" content="https://battlenuko.github.io/NukoDashPlay/TemplateData/OgpImage.png"/> 
+
+    <!-- Google Fontsのインポート-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=RocknRoll+One&display=swap" rel="stylesheet">
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -21,8 +40,48 @@
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
         <div id="unity-build-title">NukoDash!</div>
+        <div class = "share_button">
+          <!--共有ボタン-->
+          <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" 
+          class="twitter-share-button" 
+          data-url="https://battlenuko.github.io/NukoDashPlay/"
+          data-text="ぬこダッシュ！【Unity WebGL】 -猫耳少女、走ります。- #ぬこダッシュ" 
+          data-lang="ja"
+          data-show-count="false">Tweet</a>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <!--フォローボタン-->
+          <a href="https://twitter.com/battle_nuko?ref_src=twsrc%5Etfw" 
+          class="twitter-follow-button" data-show-count="false">Follow @battle_nuko</a>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+        <!--ページ遷移ボタン-->
+        <div class = "help_page">
+          <br>
+          <a href="game.html" target="_blank" rel="noopener noreferrer" class="btn btn--orange">全画面表示</a>
+          <a href="help.html" class="btn btn--orange">遊び方・ヘルプ</a>
+          <br>
+        </div>
+        <!--iPad向け-->
+        <div class = "ipad_notice">
+          <h3><div class="head_sub">iPadOSでのフルスクリーン操作について</div></h3>
+          <p><img src="TemplateData/fullscreen-button.png" width="22" height="22" alt="フルスクリーンボタン">を押してフルスクリーン状態で操作していると
+            <span class="font_blue">「フルスクリーンでタイプ入力しているようです」</span>
+          </p>
+          <p>という警告が表示されることがあります。</p>
+          <p>操作方法にもよりますがこの警告はかなり頻繁に表示されてしまいますので、iPadOSでフルスクリーン操作を使用する場合は
+          <p>上記<span class="font_blue">「全画面表示」</span>ボタンより全画面ページを利用して頂くようお願いします。</p>
+          <p>また、このサイトが個人情報などを不正に引き出す事はありません。</p>
+          <br>
+          <br>
+        </div>
       </div>
     </div>
+
+
+
+
+
+
     <script>
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
@@ -76,11 +135,12 @@
       // config.matchWebGLToCanvasSize = false;
 
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        container.className = "unity-mobile";
+        // container.className = "unity-mobile";
+        container.className = "unity-desktop";
         // Avoid draining fillrate performance on mobile devices,
         // and default/override low DPI mode on mobile browsers.
         config.devicePixelRatio = 1;
-        unityShowBanner('起動しない場合はページの再読み込みをお試しください。/ このページでは端末を横向きにしてお楽しみください。 ');
+        unityShowBanner('このページでは端末を横向きにしてお楽しみください。');
       } else {
         canvas.style.width = "960px";
         canvas.style.height = "600px";

@@ -1,18 +1,231 @@
-body { padding: 0; margin: 0 }
-#unity-container { position: absolute }
-#unity-container.unity-desktop { left: 50%; top: 50%; transform: translate(-50%, -50%) }
-#unity-container.unity-mobile { width: 100%; height: 100% }
-#unity-canvas { background: #231F20 }
-.unity-mobile #unity-canvas { width: 100%; height: 100% }
-#unity-loading-bar { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none }
-#unity-logo { width: 154px; height: 130px; background: url('unity-logo-dark.png') no-repeat center }
-#unity-progress-bar-empty { width: 141px; height: 18px; margin-top: 10px; background: url('progress-bar-empty-dark.png') no-repeat center }
-#unity-progress-bar-full { width: 0%; height: 18px; margin-top: 10px; background: url('progress-bar-full-dark.png') no-repeat center }
-#unity-footer { position: relative }
-.unity-mobile #unity-footer { display: none }
-#unity-webgl-logo { float:left; width: 204px; height: 38px; background: url('webgl-logo.png') no-repeat center }
-#unity-build-title { float: right; margin-right: 10px; line-height: 38px; font-family: arial; font-size: 18px }
-#unity-fullscreen-button { float: right; width: 38px; height: 38px; background: url('fullscreen-button.png') no-repeat center }
-#unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }
+body { 
+    padding: 0; 
+    margin: 0; 
+    background-image: url('NukoBg.png');
+}
 
-#nuko-sl { width: 128px; height: 128px; background: url('NukoSlWhite.png') no-repeat center }
+#unity-container { 
+    position: absolute ;
+    
+    left: 50%; 
+}
+
+#unity-container.unity-desktop { 
+    left: 50%; 
+    top: 75%; 
+    transform: translate(-50%, -50%);
+}
+
+@media (orientation: portrait){
+    .unity-desktop {
+        top: 50%!important;
+    }
+}
+/*
+#unity-container.unity-mobile { 
+    width: 100%; 
+    height: 100% 
+}
+*/
+
+#unity-canvas { 
+    background: #231F20 
+}
+
+/*
+.unity-mobile #unity-canvas { 
+    width: 100%; 
+    height: 100% 
+}
+*/
+
+#unity-loading-bar { 
+    position: absolute; 
+    left: 50%; 
+    top: 30%; 
+    transform: translate(-50%, -50%); 
+    display: none 
+}
+
+#unity-logo { 
+    width: 154px; 
+    height: 130px; 
+    background: url('unity-logo-dark.png') no-repeat center 
+}
+
+#unity-progress-bar-empty { 
+    width: 141px; 
+    height: 18px; 
+    margin-top: 10px; 
+    background: url('progress-bar-empty-dark.png') no-repeat center 
+}
+
+#unity-progress-bar-full { 
+    width: 0%; 
+    height: 18px; 
+    margin-top: 10px; 
+    background: url('progress-bar-full-dark.png') no-repeat center 
+}
+
+#unity-footer { 
+    position: relative 
+}
+
+/*
+.unity-mobile #unity-footer { 
+    display: none 
+}
+*/
+
+#unity-webgl-logo { 
+    float:left; 
+    width: 204px; 
+    height: 38px; 
+    background: url('webgl-logo.png') no-repeat center 
+}
+
+#unity-build-title { 
+    float: right; 
+    margin-right: 10px; 
+    line-height: 38px; 
+    font-family: arial; 
+    font-size: 18px 
+}
+
+#unity-fullscreen-button { 
+    float: right; 
+    width: 38px; 
+    height: 38px; 
+    background: url('fullscreen-button.png') no-repeat center 
+}
+
+#unity-warning { 
+    position: absolute; 
+    left: 50%; 
+    top: 5%; 
+    transform: translate(-50%); 
+    background: white; 
+    padding: 10px; 
+    display: none 
+}
+
+/* custom */
+#nuko-sl { 
+    width: 128px; 
+    height: 128px; 
+    background: url('NukoSlWhite.png') no-repeat center 
+}
+
+.help_page{ 
+    position: relative; 
+    top: 50px; 
+    font-family: 'Kosugi Maru', sans-serif; 
+    text-align: center;
+}
+
+.share_button{ 
+    position: relative; 
+    top: 50px; 
+    text-align: center; 
+    left: 50%; 
+    transform: translate(-53.1%);
+}
+
+.ipad_notice{ 
+    position: relative; 
+    top: 70px; 
+    font-family: 'Kosugi Maru', sans-serif;  
+    text-align: left;
+}
+
+/* ヘルプページ本文*/
+.align_left{ 
+    position: relative; 
+    font-family: 'Kosugi Maru', sans-serif; 
+    margin: 50px 7%; 
+    text-align: left;
+}
+
+.align_title{ 
+    position: relative; 
+    font-family: 'Kosugi Maru', sans-serif; 
+    margin: 100px; 
+    text-align: center; 
+    border-bottom: dotted 4px;
+}
+
+.font_blue{
+    color:dodgerblue; 
+    font-weight: bold;
+}
+
+.title_img{
+    width: 514px; 
+    height:294px; 
+    background: url('TitleLogo.png') no-repeat center; 
+    margin:0 auto; 
+}
+
+/* パーツ */
+.back_button_center{ 
+    position: relative; 
+    font-family: 'Kosugi Maru', sans-serif; 
+    margin: 70px; 
+    text-align: center;
+}
+
+.back_button_center_help{ 
+    position: relative; 
+    font-family: 'Kosugi Maru', sans-serif; 
+    margin: 0 70px 70px 70px; 
+    text-align: center;
+}
+
+.head_sub {
+    padding: 0.5em;/*文字周りの余白*/
+    color: #494949;/*文字色*/
+    background: #fffaf4;/*背景色*/
+    border-left: solid 5px #ffaf58;/*左線（実線 太さ 色）*/
+}
+
+.head_title {
+    position: relative;
+    padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+    text-align: center;
+    font-family: 'Kosugi Maru', sans-serif;
+}
+  
+/* 表題の下線 */
+.head_title:before {
+    position: absolute;
+    bottom: -10px;
+    left: calc(50% - 30px);
+    width: 60px;
+    height: 5px;
+    content: '';
+    border-radius: 3px;
+    background: #eb6100;
+}
+
+.btn--orange,
+  a.btn--orange {
+    border-radius: 100px;
+    display: inline-block;
+    width: 200px;
+    padding: 15px;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align: center;
+    margin: 10px;
+    color: #fff;
+    background-color: #2e2e36;
+    /*#eb6100*/
+}
+
+.btn--orange:hover,
+  a.btn--orangehover {
+    color: #fff;
+    background: #494949;
+    /*#f56500*/
+}
+  
