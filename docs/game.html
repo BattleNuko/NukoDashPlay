@@ -90,10 +90,11 @@
         // Avoid draining fillrate performance on mobile devices,
         // and default/override low DPI mode on mobile browsers.
         config.devicePixelRatio = 1.5;
-        unityShowBanner('このページでは端末を横向きにしてお楽しみください。');
+        unityShowBanner('このページでは端末を【横向き】にしてお楽しみください。 また、音が流れます。');
       } else {
         // 強制的に全画面モードに変更
         container.className = "unity-mobile";
+        unityShowBanner('このページでは音が流れます。');
       }
       loadingBar.style.display = "block";
 
