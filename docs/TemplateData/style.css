@@ -207,6 +207,47 @@ body {
     background: #eb6100;
 }
 
+.btn--black,
+  a.btn--black {
+    border-radius: 100px;
+    display: inline-block;
+    width: 200px;
+    padding: 15px;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align: center;
+    margin: 10px;
+    color: #fff;
+    background-color: #2e2e36;
+}
+
+.btn--black:hover,
+  a.btn--blackhover {
+    color: #fff;
+    background: #494949;
+}
+
+.btn--blue,
+  a.btn--blue {
+    border-radius: 100px;
+    display: inline-block;
+    width: 200px;
+    padding: 15px;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align: center;
+    margin: 10px;
+    color: #fff;
+    background-color: dodgerblue;
+    /* ff7b00 */
+}
+  
+.btn--blue:hover,
+  a.btn--bluehover {
+    color: #fff;
+    background: #51a8ff;
+}
+
 .btn--orange,
   a.btn--orange {
     border-radius: 100px;
@@ -218,14 +259,11 @@ body {
     text-align: center;
     margin: 10px;
     color: #fff;
-    background-color: #2e2e36;
-    /*#eb6100*/
+    background-color: #eb6100;
 }
-
+  
 .btn--orange:hover,
   a.btn--orangehover {
     color: #fff;
-    background: #494949;
-    /*#f56500*/
+    background: #f56500;
 }
-  
