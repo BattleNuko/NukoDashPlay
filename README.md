@@ -1,15 +1,18 @@
 # NukoDash!
 
 ## クレジット(敬称略)
-Update: 2023/3/29
-### アニメーション
+Update: 2024/6/21
+### アニメーション・スプライト
 - さらえみblog (https://saraemi.com/150610run)
+- Kenney (https://kenney.nl/assets)
 - Superpowers Asset Packs (https://github.com/sparklinlabs/superpowers-asset-packs)
 
 ### BGM
 #### DOVA-SYNDROME (https://dova-s.jp)
+- "1R DISCO" by SAKURA BEATZ.JP
 - "Unleash" by SHUNTA
 - "Vanilla Sky" by Kei Morimoto
+- "namakemono" by KK
 - "Certain Victory" by ハモおた
 - "Drive'n" by んぃん
 
